@@ -145,7 +145,7 @@ module Refile
     end
 
     def remove?
-      remove and remove != "" and remove !~ /\A0|false$\z/
+      remove and remove != "" and remove.to_s !~ /\A0|false$\z/
     end
 
     def present?
